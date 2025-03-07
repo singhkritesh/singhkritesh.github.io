@@ -12,6 +12,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+		<script>
+			if (window.location.hash !== '#forced-reload') {
+			  window.location.href = window.location.href + '#forced-reload';
+			  window.location.reload();
+			}
+		</script>
+		  
 	</head>
 	<body class="is-preload">
 
