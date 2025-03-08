@@ -1729,7 +1729,7 @@ input, select, textarea {
 /* Style for the accordion button */
 .accordion {
     background-color: rgba(27, 31, 34, 0.85);
-    padding: 12px 20px;
+    padding: 20px 20px;
     cursor: pointer;
     width: 100%; /* Full width */
     box-sizing: border-box;
@@ -1747,6 +1747,7 @@ input, select, textarea {
 	word-wrap: break-word;
 	white-space: normal;
 	min-width: 0; /* Avoids overflow by ensuring no fixed minimum width */
+	line-height: 1.2em;
 
 }
 
@@ -1777,6 +1778,8 @@ input, select, textarea {
 	margin-bottom: 10px;
 	min-width: 0; /* Prevents the content from overflowing */
 }
+/* Accordion content (inside the accordion button) */
+
 
 /* Panel (content) style */
 .panel {
@@ -1813,6 +1816,7 @@ input, select, textarea {
 @media screen and (max-width: 600px) {
     .accordion {
         font-size: 0.9rem;
+		padding: 25px 25px
     }
 
     .panel {

@@ -53,14 +53,16 @@ accordions.forEach((accordion) => {
 
         // If the clicked panel is already open, collapse it, otherwise expand it
         if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+            panel.style.maxHeight = null; // Collapse the panel
             panel.style.padding = "0 20px"; // Collapse padding
         } else {
-            panel.style.maxHeight = panel.scrollHeight + "px"; // Expand the panel smoothly
+            // Expand the panel smoothly by setting max-height to the scrollHeight of the content
+            panel.style.maxHeight = panel.scrollHeight + "px"; // Set maxHeight to the height of the content
             panel.style.padding = "20px"; // Add padding when expanded
         }
     });
 });
+
 
 
 
