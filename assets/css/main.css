@@ -1742,6 +1742,9 @@ input, select, textarea {
     text-align: left; /* Align the text to the left */
     border: none; /* Remove borders */
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.95); /* Shadow behind accordion button */
+	word-wrap: break-word;
+	white-space: normal;
+
 }
 
 .accordion-item {
