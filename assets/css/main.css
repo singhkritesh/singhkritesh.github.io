@@ -252,7 +252,7 @@ input, select, textarea {
 		font-weight: 400;
 	}
   
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 600px) {
 
 		h1 {
 			font-size: 1.75rem;
@@ -262,6 +262,8 @@ input, select, textarea {
 		h2 {
 			font-size: 1.25em;
 			line-height: 1.5;
+			word-wrap: break-word;
+			white-space: normal;
 		}
 
 	}
