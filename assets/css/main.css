@@ -1587,6 +1587,8 @@ input, select, textarea {
 				-ms-transform: translateY(0);
 				transform: translateY(0);
 				opacity: 1;
+				word-wrap: break-word;
+				white-space: normal;
 			}
 
 			#main article .close {
