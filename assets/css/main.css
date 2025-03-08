@@ -1746,6 +1746,7 @@ input, select, textarea {
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.95); /* Shadow behind accordion button */
 	word-wrap: break-word;
 	white-space: normal;
+	min-width: 0; /* Avoids overflow by ensuring no fixed minimum width */
 
 }
 
@@ -1774,6 +1775,7 @@ input, select, textarea {
     transform: scale(1.05); /* Slight scaling when expanded */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.95); /* Deeper shadow when expanded */
 	margin-bottom: 10px;
+	min-width: 0; /* Prevents the content from overflowing */
 }
 
 /* Panel (content) style */
@@ -1798,6 +1800,7 @@ input, select, textarea {
     max-height: 5000px; /* Allow content to expand smoothly */
     padding: 20px; /* Add padding when expanded */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.95); /* Heavier shadow when expanded */
+	min-width: 0; /* Prevents the content from overflowing */
 }
 
 /* Hover effect for accordion */
