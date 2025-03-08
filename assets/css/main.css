@@ -232,18 +232,22 @@ input, select, textarea {
 		font-size: 2.25rempx; /* Adjust the font size as needed */
 		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
+		font-weight: 400;
+		text-align: center
 	}
 	
 	.custom-header h2 {
 		font-size: 1.5rem; /* Adjust the font size as needed */
 		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
+		font-weight: 400;
 	}
 
 	.custom-header h3 {
 		font-size: 1rem; /* Adjust the font size as needed */
 		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
+		font-weight: 400;
 	}
   
 	@media screen and (max-width: 736px) {
