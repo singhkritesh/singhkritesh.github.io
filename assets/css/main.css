@@ -1743,7 +1743,7 @@ input, select, textarea {
 .accordion.active {
     background-color: rgba(27, 31, 34, 0.85);
     transform: scale(1.05); /* Slight scaling when expanded */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 1); /* Deeper shadow when expanded */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.95); /* Deeper shadow when expanded */
 	margin-bottom: 10px;
 }
 
@@ -1754,7 +1754,7 @@ input, select, textarea {
     padding: 0 20px; /* Initial collapsed padding */
     background-color: rgba(27, 31, 34, 0.85);
     max-height: 0; /* Initially collapsed */
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Smooth transitions for max-height and padding */
+    transition: max-height 0.2s ease-out, padding 0.2s ease-out; /* Smooth transitions for max-height and padding */
     word-wrap: break-word; /* Ensure text wraps properly */
     white-space: normal;
     border-radius: 5px; /* Optional: Rounded corners for the panel */
@@ -1768,7 +1768,7 @@ input, select, textarea {
     display: block;
     max-height: 5000px; /* Allow content to expand smoothly */
     padding: 20px; /* Add padding when expanded */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 1); /* Heavier shadow when expanded */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.95); /* Heavier shadow when expanded */
 }
 
 /* Hover effect for accordion */
