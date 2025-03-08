@@ -196,10 +196,6 @@ input, select, textarea {
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
-			word-wrap: break-word;
-			white-space: normal;
-			overflow-wrap: break-word;
-			word-break: break-word;
 		}
 
 	h1 {
@@ -214,6 +210,7 @@ input, select, textarea {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
+
 	}
 
 	h3 {
@@ -1587,9 +1584,6 @@ input, select, textarea {
 				-ms-transform: translateY(0);
 				transform: translateY(0);
 				opacity: 1;
-				word-wrap: break-word;
-				white-space: normal;
-				overflow-wrap: break-word;
 			}
 
 			#main article .close {
