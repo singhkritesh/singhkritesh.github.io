@@ -198,6 +198,8 @@ input, select, textarea {
 			margin: 0 0 2rem 0;
 			word-wrap: break-word;
 			white-space: normal;
+			overflow-wrap: break-word;
+			word-break: break-word;
 		}
 
 	h1 {
