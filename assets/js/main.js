@@ -37,15 +37,16 @@ searchInput.addEventListener('input', () => {
 });
 
 // script.js
+// Get all accordion elements
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach((accordion) => {
-    accordion.addEventListener("click", function () {
-        // Toggle the active class for button styling and expand/collapse behavior
-        this.classList.toggle("active");
+    const panel = accordion.nextElementSibling;
 
-        // Get the associated panel (content) element
-        const panel = this.nextElementSibling;
+    // Add click event to accordion to toggle expand/collapse
+    accordion.addEventListener("click", function () {
+        // Toggle active class for button styling and expand/collapse behavior
+        this.classList.toggle("active");
 
         // Collapse all other panels first
         accordions.forEach((otherAccordion) => {
@@ -56,12 +57,27 @@ accordions.forEach((accordion) => {
             }
         });
 
-        // If the clicked panel is already open, collapse it, otherwise expand it
+        // Expand or collapse the clicked panel
         if (panel.style.maxHeight === "0px" || !panel.style.maxHeight) {
-            panel.style.maxHeight = panel.scrollHeight + "px"; // Expand smoothly based on content height
+            panel.style.maxHeight = panel.scrollHeight + "px"; // Expand the panel smoothly
         } else {
             panel.style.maxHeight = "0"; // Collapse the panel smoothly
         }
+    });
+
+    // Add click event on the panel itself to collapse it when clicked, except when selecting text
+    panel.addEventListener("click", function (event) {
+        // Check if the click was on the text area or other non-clickable parts of the panel
+        const isTextSelected = window.getSelection().toString().length > 0;
+
+        if (isTextSelected) {
+            // If there is a selection, don't collapse the panel
+            return;
+        }
+
+        // If no text is selected, collapse the panel
+        accordion.classList.remove("active"); // Remove active class from accordion
+        panel.style.maxHeight = "0"; // Collapse the panel smoothly
     });
 });
 
