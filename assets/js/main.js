@@ -37,13 +37,11 @@ searchInput.addEventListener('input', () => {
 });
 
 // script.js
-
-// Get all accordion elements
 const accordions = document.querySelectorAll(".accordion");
 
 accordions.forEach((accordion) => {
     accordion.addEventListener("click", function () {
-        // Toggle active class for button styling and expand/collapse behavior
+        // Toggle the active class for button styling and expand/collapse behavior
         this.classList.toggle("active");
 
         // Get the associated panel (content) element
@@ -54,24 +52,18 @@ accordions.forEach((accordion) => {
             const otherPanel = otherAccordion.nextElementSibling;
             if (otherAccordion !== this) {
                 otherAccordion.classList.remove("active");
-                otherPanel.style.maxHeight = null; // Collapse other panels
-                otherPanel.style.padding = "0 20px"; // Collapse padding
+                otherPanel.style.maxHeight = "0"; // Collapse other panels
             }
         });
 
         // If the clicked panel is already open, collapse it, otherwise expand it
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null; // Collapse the panel
-            panel.style.padding = "0 20px"; // Collapse padding
+        if (panel.style.maxHeight === "0px" || !panel.style.maxHeight) {
+            panel.style.maxHeight = panel.scrollHeight + "px"; // Expand smoothly based on content height
         } else {
-            // Expand the panel smoothly by setting max-height to the scrollHeight of the content
-            panel.style.maxHeight = panel.scrollHeight + "px"; // Set maxHeight to the height of the content
-            panel.style.padding = "20px"; // Add padding when expanded
+            panel.style.maxHeight = "0"; // Collapse the panel smoothly
         }
     });
 });
-
-
 
 
 
