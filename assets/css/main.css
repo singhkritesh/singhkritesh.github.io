@@ -1598,7 +1598,7 @@ input, select, textarea {
 				text-indent: 4rem;
 				overflow: hidden;
 				word-wrap: break-word;
-				white-space: nowrap;
+				white-space: normal;
 			}
 
 				#main article .close:before {
