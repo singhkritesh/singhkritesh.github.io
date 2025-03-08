@@ -3,30 +3,38 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-document.addEventListener('DOMContentLoaded', function () {
+const searchInput = document.getElementById('search');
 
-    // Function to filter blog posts based on tags entered in the search bar
-    function searchTags() {
-        let input = document.getElementById('search').value.toLowerCase();  // Get the search term
-        let posts = document.querySelectorAll('.blog-post');  // Select all blog posts
-        
-        // Loop through each blog post and check if its tags match the search term
-        posts.forEach(post => {
-            let tags = post.getAttribute('data-tags');  // Get the tags for this post
-            // If the tags contain the search term (case-insensitive), show the post, otherwise hide it
-            if (tags.toLowerCase().includes(input)) {
-                post.classList.remove('hidden');  // Show the post
-            } else {
-                post.classList.add('hidden');  // Hide the post
-            }
+
+// Function to filter accordions based on the search term (independent of collapsing behavior)
+function filterAccordions() {
+    const searchTerm = searchInput.value.toLowerCase(); // Get the search term
+
+    // Loop through each accordion and check the button text for the search term
+    accordions.forEach((accordionItem) => {
+        // Get the text content of the accordion button
+        const accordionText = accordionItem.textContent.toLowerCase();
+
+        // Check if the button text contains the search term
+        if (accordionText.includes(searchTerm)) {
+            accordionItem.style.visibility = 'visible'; // Show the accordion button
+        } else {
+            accordionItem.style.visibility = 'hidden'; // Hide the accordion button but keep space
+        }
+    });
+}
+
+// Event listener for the search input field
+searchInput.addEventListener('input', filterAccordions);
+
+// Function to reset accordion visibility when search is cleared
+searchInput.addEventListener('input', () => {
+    if (searchInput.value === '') {
+        accordions.forEach((accordionItem) => {
+            accordionItem.style.visibility = 'visible'; // Show all accordion buttons when search is cleared
         });
     }
-
-    // Event listener for the search input field to trigger searchTags function on keyup
-    document.getElementById('search').addEventListener('keyup', searchTags);
-    
 });
-
 
 // script.js
 
