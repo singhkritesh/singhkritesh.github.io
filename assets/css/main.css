@@ -1589,6 +1589,7 @@ input, select, textarea {
 				opacity: 1;
 				word-wrap: break-word;
 				white-space: normal;
+				overflow-wrap: break-word;
 			}
 
 			#main article .close {
