@@ -3,6 +3,67 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+document.addEventListener('DOMContentLoaded', function () {
+
+    // Function to filter blog posts based on tags entered in the search bar
+    function searchTags() {
+        let input = document.getElementById('search').value.toLowerCase();  // Get the search term
+        let posts = document.querySelectorAll('.blog-post');  // Select all blog posts
+        
+        // Loop through each blog post and check if its tags match the search term
+        posts.forEach(post => {
+            let tags = post.getAttribute('data-tags');  // Get the tags for this post
+            // If the tags contain the search term (case-insensitive), show the post, otherwise hide it
+            if (tags.toLowerCase().includes(input)) {
+                post.classList.remove('hidden');  // Show the post
+            } else {
+                post.classList.add('hidden');  // Hide the post
+            }
+        });
+    }
+
+    // Event listener for the search input field to trigger searchTags function on keyup
+    document.getElementById('search').addEventListener('keyup', searchTags);
+    
+});
+
+
+// script.js
+
+// Get all accordion elements
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach((accordion) => {
+    accordion.addEventListener("click", function () {
+        // Toggle active class for button styling and expand/collapse behavior
+        this.classList.toggle("active");
+
+        // Get the associated panel (content) element
+        const panel = this.nextElementSibling;
+
+        // Collapse all other panels first
+        accordions.forEach((otherAccordion) => {
+            const otherPanel = otherAccordion.nextElementSibling;
+            if (otherAccordion !== this) {
+                otherAccordion.classList.remove("active");
+                otherPanel.style.maxHeight = null; // Collapse other panels
+                otherPanel.style.padding = "0 20px"; // Collapse padding
+            }
+        });
+
+        // If the clicked panel is already open, collapse it, otherwise expand it
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            panel.style.padding = "0 20px"; // Collapse padding
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px"; // Expand the panel smoothly
+            panel.style.padding = "20px"; // Add padding when expanded
+        }
+    });
+});
+
+
+
 
 (function($) {
 

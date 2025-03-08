@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1656,3 +1659,133 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+/* Styling the search input */
+#search {
+    width: 100%;  /* Full width of the parent container */
+    max-width: 400px;  /* Limit the width for better appearance */
+    padding: 10px;
+    margin: 20px auto;  /* Center the input */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;  /* Ensure padding doesn't affect width */
+}
+
+#search::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+/* Hide posts that don't match the search criteria */
+.hidden {
+    display: none;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.blog-post h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: white;
+}
+
+/* Style for the accordion button */
+.accordion {
+    background-color: rgba(27, 31, 34, 0.85);
+    padding: 12px 20px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+    margin-bottom: 5px; /* Adds spacing between accordions */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transitions */
+    font-size: 0.9rem;
+    font-family: "Source Sans Pro", sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Align text to the left horizontally */
+    align-items: center; /* Align text vertically to the center */
+    text-align: left; /* Align the text to the left */
+    border: none; /* Remove borders */
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.95); /* Shadow behind accordion button */
+}
+
+.accordion-item {
+	border: 1px solid #ddd;
+	margin-bottom: 5px;
+	border-radius: 5px;
+  }
+  
+  .accordion-header {
+	width: 100%;
+	padding: 15px;
+	text-align: left;
+	background-color: #f1f1f1;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	transition: background-color 0.3s ease;
+  }
+
+  
+/* Accordion header when active */
+.accordion.active {
+    background-color: rgba(27, 31, 34, 0.85);
+    transform: scale(1.05); /* Slight scaling when expanded */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 1); /* Deeper shadow when expanded */
+	margin-bottom: 10px;
+}
+
+/* Panel (content) style */
+.panel {
+    display: block; /* Ensure it is in flow */
+    overflow: hidden; /* Hide content while collapsing */
+    padding: 0 20px; /* Initial collapsed padding */
+    background-color: rgba(27, 31, 34, 0.85);
+    max-height: 0; /* Initially collapsed */
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out; /* Smooth transitions for max-height and padding */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    white-space: normal;
+    border-radius: 5px; /* Optional: Rounded corners for the panel */
+    border: none; /* Remove panel border */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.95); /* Shadow behind the expanded panel */
+    margin-bottom: 20px; /* Adds space between the expanded panel and the next accordion */
+}
+
+/* When the accordion is expanded */
+.accordion.active + .panel {
+    display: block;
+    max-height: 5000px; /* Allow content to expand smoothly */
+    padding: 20px; /* Add padding when expanded */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1); /* Heavier shadow when expanded */
+}
+
+/* Hover effect for accordion */
+.accordion:hover {
+    background-color: #0e0e0ed5 ;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Shadow when hovering */
+}
+
+/* Optional: Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    .accordion {
+        font-size: 0.9rem;
+    }
+
+    .panel {
+        font-size: 0.85rem;
+    }
+}
+
+ /* Accordion end*/
