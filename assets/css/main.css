@@ -230,19 +230,19 @@ input, select, textarea {
     /* Target h1 and h2 within the custom-header class */
 	.custom-header h1 {
 		font-size: 2.25rempx; /* Adjust the font size as needed */
-		letter-spacing: 0.2px; /* Adjust the letter spacing as needed */
+		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
 	}
 	
 	.custom-header h2 {
 		font-size: 1.5rem; /* Adjust the font size as needed */
-		letter-spacing: 0.2px; /* Adjust the letter spacing as needed */
+		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
 	}
 
 	.custom-header h3 {
 		font-size: 1rem; /* Adjust the font size as needed */
-		letter-spacing: 0.2px; /* Adjust the letter spacing as needed */
+		letter-spacing: 0.3px; /* Adjust the letter spacing as needed */
 		font-family: 'Arial', sans-serif; /* Optional: Specify a custom font */
 	}
   
