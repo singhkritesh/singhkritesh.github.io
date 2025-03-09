@@ -4,7 +4,46 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+$(document).ready(function() {
+    // Function to hide the loader and close the popup
+    function closePopup() {
+        // Hide the loader (you can also fade it out)
+        $('.poptrox-popup .loader').fadeOut();
+
+        // Close the popup (Poptrox provides a method to close the popup)
+        $.poptrox.close(); // Ensure this method is available from Poptrox
+    }
+
+    // Close the popup when Escape key is pressed
+    $(document).keydown(function(event) {
+        if (event.key === "Escape") {
+            closePopup();
+        }
+    });
+
+    // Close the popup when clicking outside the popup
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.poptrox-popup').length) {
+            closePopup();
+        }
+    });
+
+    // Optional: Hide loader and close the popup after some timeout (in case image takes too long to load)
+    $(document).on('poptrox:load', function() {
+        setTimeout(function() {
+            closePopup(); // Close popup after timeout if needed
+        }, 5000); // Adjust timeout as needed (e.g., 5 seconds)
+    });
+});
+
 (function($) {
+
+
+	var $window = $(window),
+        $body = $('body'),
+        $wrapper = $('#wrapper'),
+        $main = $('#main');
+
     // Poptrox Setup
     $main.poptrox({
         onPopupOpen: function() {
@@ -60,15 +99,6 @@
             closePopup(); // Close popup after timeout if needed
         }, 5000); // Adjust timeout as needed (e.g., 5 seconds)
     });
-
-})(jQuery);
-
-(function($) {
-
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper'),
-		$main = $('#main'),
 		settings = {
 
 			// Keyboard shortcuts.
