@@ -79,12 +79,13 @@ $(document).ready(function() {
         $body.removeClass('is-poptrox-visible');
     }
 
-    // Close the popup when Escape key is pressed
-    $(document).keydown(function(event) {
-        if (event.key === "Escape") {
-            closePopup();
-        }
-    });
+   // Close the popup when Escape key is pressed
+$(document).keydown(function(event) {
+    // Check if the poptrox modal is visible and Escape key is pressed
+    if ($body.hasClass('is-poptrox-visible') && event.key === "Escape") {
+        closePopup();
+    }
+});
 
     // Close the popup when clicking outside the popup
     $(document).click(function(event) {
