@@ -342,7 +342,7 @@ input, select, textarea {
 
 /* Main */
 #main {
-    margin-top: 150px; /* Adjust this to make room for the fixed back button */
+    margin-top: 130px; /* Adjust this to make room for the fixed back button */
     position: relative;
     z-index: 1;
     width: 100%;
@@ -909,7 +909,7 @@ input, select, textarea {
 
 .back-button {
     position: fixed;       /* Fix the button position relative to the viewport */
-    top: 10px;             /* Place the button 10px from the top */
+    top: 50px;             /* Place the button 10px from the top */
     left: 50%;             /* Position it at the center horizontally */
     transform: translateX(-50%);  /* Adjust the left position by half the button's width to center it */
     padding: 10px 20px;    /* Padding inside the button */
