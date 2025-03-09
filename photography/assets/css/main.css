@@ -930,9 +930,11 @@ input, select, textarea {
     text-align: center;    /* Center text inside button */
     border-radius: 4px;    /* Rounded corners */
     text-decoration: none; /* Remove underline from the link */
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
     cursor: pointer;      /* Make the cursor a pointer on hover */
     z-index: 1000;         /* Ensure it's above other elements */
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7), -4px -4px 8px rgba(255, 255, 255, 0.114);
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Optional: add shadow to text */
 }
 
 
@@ -941,8 +943,12 @@ input, select, textarea {
     background-color: #000000a0; /* Hover color */
 	color: #767474; 
 	text-decoration: none;
+	/*box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5), -6px -6px 10px rgba(255, 255, 255, 0.4);
+    transform: translateX(-50%) translateY(-1px);  Slight lift effect */
 }
 
 .back-button:active {
     background-color: #222; /* Active color */
+	box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3), inset -4px -4px 5px rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%) translateY(0.5px); /* Button pressed down effect */
 }
