@@ -895,7 +895,7 @@ input, select, textarea {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background-image: url("../../images/new-overlay.png"); /* Replace with your new image */
+			background-image: url("../../images/new_overlay.png"); /* Replace with your new image */
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
