@@ -87,9 +87,10 @@ $(document).keydown(function(event) {
     }
 });
 
-    // Close the popup when clicking outside the popup
-    $(document).click(function(event) {
-        if (!$(event.target).closest('.poptrox-popup').length) {
+      // Close the popup when clicking outside the popup
+	  $(document).click(function(event) {
+        // Check if the click is outside the popup
+        if ($body.hasClass('is-poptrox-visible') && !$(event.target).closest('.poptrox-popup').length) {
             closePopup();
         }
     });
