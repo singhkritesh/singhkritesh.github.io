@@ -4,14 +4,40 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$(document).ready(function() {
-    // Function to hide the loader and close the popup
+(function($) {
+    // Poptrox Setup
+    $main.poptrox({
+        onPopupOpen: function() {
+            $body.addClass('is-poptrox-visible');
+        },
+        onPopupClose: function() {
+            $body.removeClass('is-poptrox-visible');
+        },
+        overlayColor: '#1a1f2c',
+        overlayOpacity: 0.75,
+        popupCloserText: '',
+        popupLoaderText: '',
+        selector: '.item.thumb a.image',
+        caption: function($a) {
+            return $a.prev('h2').html();
+        },
+        usePopupDefaultStyling: false,
+        usePopupCloser: false,
+        usePopupCaption: true,
+        usePopupNav: true,
+        windowMargin: 50
+    });
+
+    // Function to close the popup and reset everything
     function closePopup() {
-        // Hide the loader (you can also fade it out)
+        // Fade out loader
         $('.poptrox-popup .loader').fadeOut();
 
-        // Close the popup (Poptrox provides a method to close the popup)
-        $.poptrox.close(); // Ensure this method is available from Poptrox
+        // Close the popup
+        $.poptrox.close(); // Close the popup using Poptrox
+
+        // Remove any active classes and reset body
+        $body.removeClass('is-poptrox-visible');
     }
 
     // Close the popup when Escape key is pressed
@@ -28,13 +54,14 @@ $(document).ready(function() {
         }
     });
 
-    // Optional: Hide loader and close the popup after some timeout (in case image takes too long to load)
+    // Optional: Automatically close the popup after a timeout (in case image takes too long to load)
     $(document).on('poptrox:load', function() {
         setTimeout(function() {
             closePopup(); // Close popup after timeout if needed
         }, 5000); // Adjust timeout as needed (e.g., 5 seconds)
     });
-});
+
+})(jQuery);
 
 (function($) {
 
