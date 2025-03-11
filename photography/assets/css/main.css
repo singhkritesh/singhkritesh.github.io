@@ -555,6 +555,9 @@ input, select, textarea {
 				overflow-x: hidden;
 				overflow-y: auto;
 				padding: 2.5px;
+				margin-top: 75px; /* Ensures content doesn't overlap the fixed header */
+				min-height: calc(100vh - 75px); /* Ensures proper height calculation */
+			    height: 100%;
 			}
 
 				#main .items {
@@ -967,13 +970,11 @@ input, select, textarea {
 			box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
 			transform: translateX(-50%) translateY(1px);
 		}
-/* For responsive design */
-@media (max-width: 768px) {
-    #header {
-        padding: 15px 0;
-    }
-
-    #back-button {
-        font-size: 1rem; /* Adjust button size for smaller screens */
-    }
-}
+		@media (max-width: 768px) {
+			#header {
+				position: fixed; /* Keeps the header fixed */
+				width: 100%;
+				height: 75px; /* Adjust based on your design */
+			}
+		
+		}
