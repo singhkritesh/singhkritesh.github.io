@@ -3,32 +3,7 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-// Function to adjust the height of #main and trigger address bar hiding
-function adjustMainHeight() {
-    // Get the height of the header
-    var headerHeight = document.getElementById('header').offsetHeight;
-    
-    // Get the viewport height
-    var viewportHeight = window.innerHeight;
-    
-    // Calculate the height available for #main
-    var mainHeight = viewportHeight - headerHeight;
 
-    // Apply the calculated height to #main
-    document.getElementById('main').style.height = mainHeight + 'px';
-
-    // Ensure the address bar hides in Safari
-    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-        // Trigger scroll to hide the address bar
-        setTimeout(function() {
-            window.scrollTo(0, 1);
-        }, 100); // Delay for smooth scrolling
-    }
-}
-
-// Adjust the #main height on load and resize
-window.addEventListener('load', adjustMainHeight);
-window.addEventListener('resize', adjustMainHeight);
 //Old
 $(document).ready(function() {
     // Function to hide the loader and close the popup

@@ -118,7 +118,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			body {
 				background-attachment: scroll;
@@ -221,7 +221,7 @@ input, select, textarea {
 				margin-left: 0;
 			}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			ul.icons {
 				margin: 0 0 2em 0;
@@ -304,7 +304,7 @@ input, select, textarea {
 			filter: blur(0.25em);
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			#wrapper {
 				min-height: 0;
@@ -333,7 +333,7 @@ input, select, textarea {
 			right: 0;
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			.scrollZone {
 				display: none;
@@ -548,7 +548,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			#main {
 				width: 100%;
@@ -688,7 +688,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			#footer {
 				text-align: center;
@@ -813,7 +813,7 @@ input, select, textarea {
 				content: '\f104';
 			}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			.poptrox-popup {
 				background: #0a0f1c;
@@ -971,7 +971,7 @@ input, select, textarea {
 			box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
 			transform: translateX(-50%) translateY(1px);
 		}
-		@media (max-width: 768px) {
+		@media (max-width: 480px) {
 			#header {
 				position: fixed; /* Keeps the header fixed */
 				width: 100%;
