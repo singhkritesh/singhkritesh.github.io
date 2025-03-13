@@ -933,13 +933,24 @@ input, select, textarea {
 			right: 0;
 			z-index: 1000; /* Ensure it's above other content */
 			background-color: transparent; /* Background color for contrast */
-			background-image: url("../../images/new_overlay.png");  /* Add your image here */
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), 
+								url("../../images/bg.jpg");  /* Add your image here */
   			background-size: cover;  /* Makes the image cover the entire header */
-  			background-position: center center;  /* Centers the image */
+  			background-position: top top;  /* Centers the image */
 			padding: 0px 0;
 			text-align: center;
 			width: 100%;
 			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for visual separation */
+		}
+		header::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url("../../images/overlay.png"); /* Adjust the color and opacity for your overlay */
+			z-index: 1;
 		}
 		
 		/* Back button styling */
