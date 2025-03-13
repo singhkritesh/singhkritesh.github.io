@@ -557,7 +557,8 @@ input, select, textarea {
 				padding: 2.5px;
 				margin-top: 75px; /* Ensures content doesn't overlap the fixed header */
 				height: calc(100vh - 75px); /* Ensures proper height calculation */
-			    justify-content: flex-start;
+			    min-height: 100vh;
+				justify-content: flex-start;
 				padding-top: 5px;	
 				}
 
