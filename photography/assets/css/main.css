@@ -932,7 +932,10 @@ input, select, textarea {
 			left: 0;
 			right: 0;
 			z-index: 1000; /* Ensure it's above other content */
-			background-color: rgba(0, 0, 0, 0); /* Background color for contrast */
+			background-color: transparent; /* Background color for contrast */
+			background-image: url("../../images/new_overlay.png");  /* Add your image here */
+  			background-size: cover;  /* Makes the image cover the entire header */
+  			background-position: center center;  /* Centers the image */
 			padding: 0px 0;
 			text-align: center;
 			width: 100%;
