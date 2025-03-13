@@ -933,10 +933,9 @@ input, select, textarea {
 			right: 0;
 			z-index: 1000; /* Ensure it's above other content */
 			background-color: transparent; /* Background color for contrast */
-			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), 
-								url("../../images/bg.jpg");  /* Add your image here */
+			background-image: url("../../images/bg.jpg");  /* Add your image here */
   			background-size: cover;  /* Makes the image cover the entire header */
-  			background-position: top top;  /* Centers the image */
+  			background-position: top center;  /* Centers the image */
 			padding: 0px 0;
 			text-align: center;
 			width: 100%;
@@ -949,7 +948,8 @@ input, select, textarea {
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background-image: url("../../images/overlay.png"); /* Adjust the color and opacity for your overlay */
+			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)),
+								url("../../images/overlay.png"); /* Adjust the color and opacity for your overlay */
 			z-index: 1;
 		}
 		
