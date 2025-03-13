@@ -3,18 +3,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-// Adjust height of #main based on actual viewport size
-function adjustMainHeight() {
-    var headerHeight = document.getElementById('header').offsetHeight;
-    var viewportHeight = window.innerHeight;
-
-    var mainHeight = viewportHeight - headerHeight;
-    document.getElementById('main').style.height = mainHeight + 'px';
-}
-
-window.addEventListener('load', adjustMainHeight);
-window.addEventListener('resize', adjustMainHeight);
-
 
 //Old
 $(document).ready(function() {
