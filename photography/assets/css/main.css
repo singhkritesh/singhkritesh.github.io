@@ -556,9 +556,9 @@ input, select, textarea {
 				overflow-y: auto;
 				padding: 2.5px;
 				margin-top: 75px; /* Ensures content doesn't overlap the fixed header */
-				height: calc(100vh - 75px); /* Ensures proper height calculation */
+				height: 100%; /* Ensures proper height calculation */
 			    justify-content: flex-start;
-				padding 10px	
+				
 				}
 
 				#main .items {
