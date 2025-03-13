@@ -3,20 +3,20 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-// This will update the height of the main content area dynamically on mobile
-function adjustHeight() {
-    if (window.innerWidth <= 768) {
-        var headerHeight = document.getElementById('header').offsetHeight;
-        var mainContent = document.getElementById('main');
-        mainContent.style.height = (window.innerHeight - headerHeight) + 'px';
-    }
+// Adjust height of #main based on actual viewport size
+function adjustMainHeight() {
+    var headerHeight = document.getElementById('header').offsetHeight;
+    var viewportHeight = window.innerHeight;
+
+    var mainHeight = viewportHeight - headerHeight;
+    document.getElementById('main').style.height = mainHeight + 'px';
 }
 
-// Adjust height when the page loads
-window.addEventListener('load', adjustHeight);
+window.addEventListener('load', adjustMainHeight);
+window.addEventListener('resize', adjustMainHeight);
 
-// Adjust height on window resize to account for changes in viewport height
-window.addEventListener('resize', adjustHeight);
+
+//Old
 $(document).ready(function() {
     // Function to hide the loader and close the popup
     function closePopup() {
