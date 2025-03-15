@@ -183,7 +183,6 @@ input, select, textarea {
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
 		letter-spacing: 0.2rem;
-		word-wrap: break-word;
 		}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -213,7 +212,6 @@ input, select, textarea {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
-		word-wrap: break-word;
 
 	}
 
