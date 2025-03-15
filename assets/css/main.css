@@ -25,7 +25,15 @@ section, summary, time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 	}
-
+/* Apply overflow-wrap globally */
+* {
+	overflow-wrap: break-word;  /* Ensures text wraps if necessary */
+  }
+  
+  /* Prevent whitespace issues */
+  * {
+	white-space: normal; /* Makes sure no elements force text into a single line */
+  }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
