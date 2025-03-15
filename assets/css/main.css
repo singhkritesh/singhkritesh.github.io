@@ -23,17 +23,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
-	}
-/* Apply overflow-wrap globally */
-* {
-	overflow-wrap: break-word;  /* Ensures text wraps if necessary */
-  }
-  
-  /* Prevent whitespace issues */
-  * {
-	white-space: normal; /* Makes sure no elements force text into a single line */
-  }
+	vertical-align: baseline;}
+
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -1065,7 +1056,7 @@ input, select, textarea {
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
-		white-space: normal;
+		white-space: nowrap;
 	}
 
 		input[type="submit"]:hover,
@@ -1606,7 +1597,7 @@ input, select, textarea {
 				cursor: pointer;
 				text-indent: 4rem;
 				overflow: hidden;
-				white-space: normal;
+				white-space: nowrap;
 			}
 
 				#main article .close:before {
