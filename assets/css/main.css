@@ -115,12 +115,14 @@ input, select, textarea {
 
 	html {
 		font-size: 16pt;
+		word-wrap: break-word;
 	}
 
-		@media screen and (max-width: 1680px) {
+		@media screen and (max-width: 736px) {
 
 			html {
 				font-size: 12pt;
+				word-wrap: break-word;
 			}
 
 		}
@@ -129,6 +131,7 @@ input, select, textarea {
 
 			html {
 				font-size: 11pt;
+				word-wrap: break-word;
 			}
 
 		}
@@ -137,6 +140,7 @@ input, select, textarea {
 
 			html {
 				font-size: 10pt;
+				word-wrap: break-word;
 			}
 
 		}
