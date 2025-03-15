@@ -23,11 +23,7 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
-	display: flex;
-    align-items: center; /* Aligns image and text vertically in the center */
-    flex-wrap: nowrap; /* Ensures they stay in a single row */
-}
+	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -268,13 +264,7 @@ input, select, textarea {
 			word-wrap: break-word;
 			white-space: normal;
 		}
-		div {
-			flex-direction: column; /* Stacks image and text vertically */
-			align-items: flex-start; /* Aligns them to the left */
-		  }
-		img {
-			margin-bottom: 10px; /* Adds space between image and text when stacked */
-		  }
+		
 	}
 
 	sub {
