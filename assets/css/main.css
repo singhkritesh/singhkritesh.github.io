@@ -264,7 +264,13 @@ input, select, textarea {
 			word-wrap: break-word;
 			white-space: normal;
 		}
-
+		div {
+			flex-direction: column; /* Stacks image and text vertically */
+			align-items: flex-start; /* Aligns them to the left */
+		  }
+		img {
+			margin-bottom: 10px; /* Adds space between image and text when stacked */
+		  }
 	}
 
 	sub {
