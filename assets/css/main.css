@@ -1487,8 +1487,8 @@ input, select, textarea {
 			}
 
 		}
-
-		@media screen and (max-width: 736px) {
+		/*Controls browser zoom for boxes*/
+		@media screen and (max-width: 1380px) {
 
 			#header {
 				padding: 1.5rem 0;
